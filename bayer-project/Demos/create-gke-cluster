@@ -1,0 +1,3 @@
+#! /bin/zsh
+gcloud container clusters create hello-cloudbuild \
+--num-nodes 1 --zone us-central1-b
