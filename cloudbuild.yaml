@@ -24,3 +24,5 @@ steps:
   args:
   - 'push'
   - 'gcr.io/$PROJECT_ID/hello-cloudbuild:$SHORT_SHA'
+options:
+  logging: CLOUD_LOGGING_ONLY
