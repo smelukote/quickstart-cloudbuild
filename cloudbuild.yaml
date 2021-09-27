@@ -5,9 +5,10 @@ steps:
            '.']
 
   # Docker Push
+  # push the container image to Container Registry
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', '-image', 
-           'us-central1-docker.pkg.dev/${PROJECT_ID}/demo-app/$COMMIT_SHA']
+    args: ['push', 'gcr.io/$PROJECT_ID/demo-app:$COMMIT_SHA']
+  
 
   # Entrypoint, timeout and environment variables
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
