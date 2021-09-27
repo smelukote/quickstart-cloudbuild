@@ -24,7 +24,7 @@ steps:
   args:
   - 'push'
   - 'gcr.io/$PROJECT_ID/hello-cloudbuild:$SHORT_SHA'
-  
+
 # Deploy to hello-cloudbuild kubernetes cluster
 - name: 'gcr.io/cloud-builders/kubectl'
   id: Deploy
@@ -33,7 +33,7 @@ steps:
   - '-f'
   - 'kubernetes.yaml'
   env:
-  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-b'
+  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
   - 'CLOUDSDK_CONTAINER_CLUSTER=hello-cloudbuild'
 
 options:
