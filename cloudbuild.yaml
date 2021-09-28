@@ -1,3 +1,4 @@
+# [START cloudbuild]
 steps:
 # This step runs the unit tests on the app
 - name: 'python:3.7-slim'
@@ -24,6 +25,7 @@ steps:
   args:
   - 'push'
   - 'gcr.io/$PROJECT_ID/hello-cloudbuild:$SHORT_SHA'
+# [END cloudbuild]
 
 # Deploy to hello-cloudbuild kubernetes cluster
 - name: 'gcr.io/cloud-builders/kubectl'
